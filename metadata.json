@@ -1,0 +1,48 @@
+{
+  "name": "eyp-sslh",
+  "version": "0.1.0",
+  "author": "eyp",
+  "summary": "sslh - port multiplexer",
+  "license": "Apache-2.0",
+  "source": "https://github.com/NTTCom-MS/eyp-sslh",
+  "project_page": "https://github.com/NTTCom-MS/eyp-sslh",
+  "issues_url": "https://github.com/NTTCom-MS/eyp-sslh/issues",
+  "dependencies": [
+    {"name":"puppetlabs/stdlib","version_requirement":">= 1.0.0 < 9.9.9"},
+    {"name":"puppetlabs/concat","version_requirement":">= 1.2.3 < 3.0.0"},
+    {"name":"eyp/systemd","version_requirement":">= 0.1.26 < 0.2.0"},
+    {"name":"eyp/eyplib","version_requirement":">= 0.1.11 < 0.2.0"}
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "Scientific",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "OEL",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [ "5", "6", "7" ]
+    },
+    {
+      "operatingsystem": "Ubuntu",
+      "operatingsystemrelease": [ "14.04", "16.04" ]
+    }
+  ],
+  "requirements": [
+    {
+      "name": "puppet",
+      "version_requirement": ">= 3.8.0"
+    }
+  ]
+}
