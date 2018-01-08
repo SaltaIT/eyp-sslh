@@ -1,3 +1,4 @@
+# puppet2sitepp @sslhprotocols
 define sslh::protocol(
                         $host,
                         $port,
