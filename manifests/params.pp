@@ -12,7 +12,7 @@ class sslh::params {
   {
     'redhat':
     {
-      $install_dependencies = [ 'libconfig', 'libconfig-devel' ]
+      $install_dependencies = [ 'libconfig', 'libconfig-devel', 'pcre-devel' ]
       case $::operatingsystemrelease
       {
         /^[5-6].*$/:
