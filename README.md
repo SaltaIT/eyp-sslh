@@ -44,11 +44,40 @@ This module requires pluginsync enabled
 
 ### Beginning with sslh
 
-The very basic steps needed for a user to get the module up and running.
+```puppet
+class { 'sslh':
+  listen_port => '444',
+}
 
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+sslh::protocol { 'ssh':
+  host => '127.0.0.1',
+  port => '22',
+}
+```
+
+```
+[root@centos7 sslh]# curl -I https://10.0.2.15:444 --insecure
+HTTP/1.1 301 Moved Permanently
+Server: nginx
+Date: Mon, 08 Jan 2018 17:26:18 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+Location: http://systemadmin.es
+
+[root@centos7 sslh]# ssh -p 444 vagrant@10.0.2.15
+The authenticity of host '[10.0.2.15]:444 ([10.0.2.15]:444)' can't be established.
+ECDSA key fingerprint is SHA256:2pWcmnQ4P38EUSSXNp89uG0um/K01bz/mWMJC3TMj2M.
+ECDSA key fingerprint is MD5:24:23:14:32:58:14:91:76:55:91:20:87:e3:dc:30:c7.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added '[10.0.2.15]:444' (ECDSA) to the list of known hosts.
+vagrant@10.0.2.15's password:
+Last login: Mon Jan  8 13:32:38 2018 from 10.0.2.2
+Welcome to your Vagrant-built virtual machine.
+[vagrant@centos7 ~]$ logout
+Connection to 10.0.2.15 closed.
+[root@centos7 sslh]# 
+```
 
 ## Usage
 
