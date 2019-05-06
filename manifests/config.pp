@@ -3,9 +3,9 @@ class sslh::config inherits sslh {
   if($sslh::params::use_systemd)
   {
     systemd::service { 'sslh':
-      execstart       => "/usr/sbin/sslh -F/etc/sslh.cfg",
-      pid_file        => $sslh::pidfile,
-      type            => 'forking',
+      execstart => '/usr/sbin/sslh -F/etc/sslh.cfg',
+      pid_file  => $sslh::pidfile,
+      type      => 'forking',
     }
   }
   else
@@ -18,9 +18,9 @@ class sslh::config inherits sslh {
 
   concat { '/etc/sslh.cfg':
     ensure => 'present',
-    owner => 'root',
-    group => 'root',
-    mode => '0640',
+    owner  => 'root',
+    group  => 'root',
+    mode   => '0640',
   }
 
   concat::fragment{ "/etc/sslh.cfg base":
