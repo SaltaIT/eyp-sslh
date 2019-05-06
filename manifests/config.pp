@@ -13,7 +13,7 @@ class sslh::config inherits sslh {
     exec { 'sslh install sysv script':
       command => "cp ${sslh::srcdir}/sslh/${sslh::params::sysv_basescript} /etc/init.d/sslh",
       creates => '/etc/init.d/sslh',
-      path => '/usr/sbin:/usr/bin:/sbin:/bin',
+      path    => '/usr/sbin:/usr/bin:/sbin:/bin',
     }
   }
 
