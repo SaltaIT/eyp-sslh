@@ -1,8 +1,12 @@
 # CHANGELOG
 
+## 0.2.0
+
+* install using packages instead of building it from source
+
 ## 0.1.2
 
-* Updated metadata for **eyp-systemd 0.2.0** 
+* Updated metadata for **eyp-systemd 0.2.0**
 
 ## 0.1.1
 

@@ -1,4 +1,4 @@
-class sslh::install inherits sslh {
+class sslh::installsource inherits sslh {
 
   Exec {
     path => '/usr/sbin:/usr/bin:/sbin:/bin'

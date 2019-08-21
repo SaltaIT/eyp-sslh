@@ -1,6 +1,6 @@
 {
   "name": "eyp-sslh",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "author": "eyp",
   "summary": "sslh - port multiplexer",
   "license": "Apache-2.0",
@@ -16,27 +16,23 @@
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "CentOS",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "Scientific",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "OEL",
-      "operatingsystemrelease": [ "5", "6", "7" ]
+      "operatingsystemrelease": [ "7" ]
     },
     {
       "operatingsystem": "OracleLinux",
-      "operatingsystemrelease": [ "5", "6", "7" ]
-    },
-    {
-      "operatingsystem": "Ubuntu",
-      "operatingsystemrelease": [ "14.04", "16.04" ]
+      "operatingsystemrelease": [ "7" ]
     }
   ],
   "requirements": [
