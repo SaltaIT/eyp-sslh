@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.1
+
+* bugfix init script
+
 ## 0.2.0
 
 * install using packages instead of building it from source

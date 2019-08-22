@@ -1,22 +1,5 @@
 class sslh::config inherits sslh {
 
-  if($sslh::params::use_systemd)
-  {
-    systemd::service { 'sslh':
-      execstart => '/usr/sbin/sslh -F/etc/sslh.cfg',
-      pid_file  => $sslh::pidfile,
-      type      => 'forking',
-    }
-  }
-  else
-  {
-    exec { 'sslh install sysv script':
-      command => "cp ${sslh::srcdir}/sslh/${sslh::params::sysv_basescript} /etc/init.d/sslh",
-      creates => '/etc/init.d/sslh',
-      path    => '/usr/sbin:/usr/bin:/sbin:/bin',
-    }
-  }
-
   concat { '/etc/sslh.cfg':
     ensure => 'present',
     owner  => 'root',
