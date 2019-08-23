@@ -1,5 +1,9 @@
 class sslh::config inherits sslh {
 
+  systemd::service::dropin { 'sslh':
+    capability_bounding_set => [ 'CAP_SETGID','CAP_SETUID', 'CAP_NET_BIND_SERVICE', 'CAP_NET_ADMIN', 'CAP_SYS_CHROOT' ],
+  }
+
   concat { '/etc/sslh.cfg':
     ensure => 'present',
     owner  => 'root',

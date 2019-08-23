@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.2
+
+* granted chroot capability using **systemd::service::dropin**
+
 ## 0.2.1
 
 * bugfix init script
