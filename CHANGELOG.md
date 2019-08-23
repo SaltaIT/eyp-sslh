@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.3
+
+* Added PID file to systemd dropin
+
 ## 0.2.2
 
 * granted chroot capability using **systemd::service::dropin**

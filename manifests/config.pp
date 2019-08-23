@@ -1,6 +1,7 @@
 class sslh::config inherits sslh {
 
   systemd::service::dropin { 'sslh':
+    pid_file                => '/run/sslh.pid',
     capability_bounding_set => [ 'CAP_SETGID','CAP_SETUID', 'CAP_NET_BIND_SERVICE', 'CAP_NET_ADMIN', 'CAP_SYS_CHROOT' ],
   }
 
